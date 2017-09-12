@@ -1,2 +1,2 @@
 # Oillak-Engine
- Simple engine for testing Vulkan and OpenGL
+ Simple engine for testing OpenGL

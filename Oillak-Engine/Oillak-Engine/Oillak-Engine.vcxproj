@@ -153,9 +153,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MyMath\customMath.cpp" />
+    <ClCompile Include="MyMath\mat3.cpp" />
+    <ClCompile Include="MyMath\mat4.cpp" />
+    <ClCompile Include="MyMath\Vector3.cpp" />
+    <ClCompile Include="MyMath\Vector4.cpp" />
     <ClCompile Include="SDLwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MyMath\customMath.h" />
+    <ClInclude Include="MyMath\mat3.h" />
+    <ClInclude Include="MyMath\mat4.h" />
+    <ClInclude Include="MyMath\Vector3.h" />
+    <ClInclude Include="MyMath\Vector4.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SDLwindow.h" />
   </ItemGroup>
