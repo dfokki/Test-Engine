@@ -42,6 +42,9 @@
     <ClCompile Include="MyMath\Vector4.cpp">
       <Filter>Resource Files\MyMath</Filter>
     </ClCompile>
+    <ClCompile Include="GLShaders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDLwindow.h">
@@ -64,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="MyMath\Vector4.h">
       <Filter>Resource Files\MyMath</Filter>
+    </ClInclude>
+    <ClInclude Include="GLShaders.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

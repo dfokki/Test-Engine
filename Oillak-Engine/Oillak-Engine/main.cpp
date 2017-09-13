@@ -18,6 +18,7 @@
 #include <time.h>
 #include "Dependencies\glm\glm\glm.hpp"
 #include <chrono>
+#include "GLShaders.h"
 
 static double t = 0;
 
@@ -31,8 +32,12 @@ void render(void)
 								1.0f };
 		static const GLfloat red[] = { 1.0f, 0.0f, 0.0f, 1.0f };
 		glClearBufferfv(GL_COLOR, 0, color);
-		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		//glClearColor(0.0, 0.0, 0.0, 1.0);//clear red
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	//	glClearColor(0.0, 0.0, 0.0, 1.0);//clear red
+		GLuint program = LoadShader("shader.vert", "shader.frag");
+		glUseProgram(program);
+		glDrawArrays(GL_POINTS, 0, 1);
+		//glPointSize(0.f);
 		t += dt;
 
 		glutSwapBuffers();
@@ -59,6 +64,11 @@ int main(int argc, char **argv)
 	}
 
 	glEnable(GL_DEPTH_TEST);
+
+	GLuint program = LoadShader("shader.vert", "shader.frag");
+	glUseProgram(program);
+	glDrawArrays(GL_POINTS, 0, 1);
+	glPointSize(40.f);
 
 	// register callbacks
 	glutDisplayFunc(render);

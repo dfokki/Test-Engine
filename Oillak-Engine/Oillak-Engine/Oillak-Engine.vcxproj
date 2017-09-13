@@ -152,6 +152,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GLShaders.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MyMath\customMath.cpp" />
     <ClCompile Include="MyMath\mat3.cpp" />
@@ -161,6 +162,7 @@
     <ClCompile Include="SDLwindow.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GLShaders.h" />
     <ClInclude Include="MyMath\customMath.h" />
     <ClInclude Include="MyMath\mat3.h" />
     <ClInclude Include="MyMath\mat4.h" />

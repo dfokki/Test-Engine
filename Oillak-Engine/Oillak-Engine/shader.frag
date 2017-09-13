@@ -1,13 +1,11 @@
-#version 450
+
+	#version 450 core
+
+	out vec4 FragColor;
 
 
-smooth in vec4 Color;
+	void main()
+	{
+		FragColor = vec4(0.0, 0.8, 1.0, 1.0);
+	}
 
-
-out vec4 FragColor;
-
-
-void main()
-{
-	FragColor = Color;
-}
