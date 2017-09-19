@@ -84,5 +84,11 @@
     <None Include="shader.vert">
       <Filter>Source Files\Shaders</Filter>
     </None>
+    <None Include="tesscontrol.tcs">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="tessevaluation.tes">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

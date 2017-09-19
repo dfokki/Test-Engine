@@ -34,10 +34,22 @@ void render(void)
 		glClearBufferfv(GL_COLOR, 0, color);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	//	glClearColor(0.0, 0.0, 0.0, 1.0);//clear red
-		GLuint program = LoadShader("shader.vert", "shader.frag");
+		//GLuint program = LoadShader("shader.vert", "shader.frag");
+		//glUseProgram(program);
+		//
+		//to use tess shaders tell the OpenGl to draw only the outline of resulting triangles
+		//GLuint program = LoadShader("shader.vert", "shader.frag");
+		/*
 		glUseProgram(program);
-		glDrawArrays(GL_POINTS, 0, 1);
+		glDrawArrays(GL_TRIANGLES, 0, 3);*/
 		//glPointSize(0.f);
+		GLuint program = LoadShader("shader.vert", "tesscontrol.tcs", "tessevaluation.tes", "shader.frag");
+		glUseProgram(program);
+
+		//shows tess patches
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+		glDrawArrays(GL_PATCHES, 0, 3);
+
 		t += dt;
 
 		glutSwapBuffers();
@@ -65,16 +77,19 @@ int main(int argc, char **argv)
 
 	glEnable(GL_DEPTH_TEST);
 
-	GLuint program = LoadShader("shader.vert", "shader.frag");
-	glUseProgram(program);
-	glDrawArrays(GL_POINTS, 0, 1);
-	glPointSize(40.f);
+	//GLuint program = LoadShader("shader.vert", "shader.frag");
+	//glUseProgram(program);
+	//
+
+
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	//glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	// register callbacks
 	glutDisplayFunc(render);
 	
 	// idle func registration
-	glutIdleFunc(render);
+//	glutIdleFunc(render);
 
 	// Function that gets the application in a never ending loop, always waiting for the next event to process
 	glutMainLoop();
