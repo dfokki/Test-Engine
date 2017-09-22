@@ -1,8 +1,9 @@
-#version 410 core
+#version 450 core
 //tesselation control shader
 
 layout (vertices = 3) out;
-
+vec4 vs_color in;
+vec4 color out;
 void main(void)
 {
 
